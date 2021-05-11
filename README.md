@@ -63,6 +63,14 @@ flit publish --repository pypitest
 flit publish
 ```
 
+### Release
+
+Steps for Releasing a new version
+
+1. Increase the version number in `icerok_server/__init__.py`
+2. Create the release in Github
+3. Automatically an action will be executed and the package will be publish in Pypi
+
 ## Credits
 
 * Thanks to [Anton Zhiyanov](https://github.com/nalgeon) for this wonderful article: [How to make an awesome Python package in 2021](https://antonz.org/python-packaging/) 

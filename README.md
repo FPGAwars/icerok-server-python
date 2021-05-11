@@ -1,11 +1,14 @@
+[![PyPI Version][pypi-image]][pypi-url]
+
+
 # icerok-server
 Receive data from the icerok circuits on the FPGA
 
-* Package in pypi: [icerok_server](https://pypi.org/project/icerok_server/)
-
 ## Installation
 
-TODO
+```
+pip install -U icerok_server
+```
 
 
 ## Developers
@@ -58,3 +61,9 @@ flit publish --repository pypitest
 ```
 flit publish
 ```
+
+<!-- Badges -->
+[pypi-image]: https://img.shields.io/pypi/v/icerok_server
+[pypi-url]: https://pypi.org/project/icerok_server/
+[build-image]: https://github.com/nalgeon/podsearch-py/actions/workflows/build.yml/badge.svg
+[build-url]: https://github.com/nalgeon/podsearch-py/actions/workflows/build.yml

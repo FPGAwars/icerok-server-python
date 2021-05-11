@@ -1,4 +1,5 @@
 [![PyPI Version][pypi-image]][pypi-url]
+[![Build Status][build-image]][build-url]
 
 
 # icerok-server
@@ -65,5 +66,5 @@ flit publish
 <!-- Badges -->
 [pypi-image]: https://img.shields.io/pypi/v/icerok_server
 [pypi-url]: https://pypi.org/project/icerok_server/
-[build-image]: https://github.com/nalgeon/podsearch-py/actions/workflows/build.yml/badge.svg
-[build-url]: https://github.com/nalgeon/podsearch-py/actions/workflows/build.yml
+[build-image]: https://github.com/FPGAwars/icerok-server-python/actions/workflows/build.yml/badge.svg
+[build-url]: https://github.com/FPGAwars/icerok-server-python/actions/workflows/build.yml

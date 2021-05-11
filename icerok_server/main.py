@@ -1,4 +1,4 @@
-"""holi...."""
+"""Main program"""
 
 import time
 import sys

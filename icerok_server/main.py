@@ -14,6 +14,7 @@ TIMEOUT = 100
 FILENAME = "data.raw"
 BYTES = 1
 
+print("RUNNING...")
 print(f"{icerok_server.__package__}: Version {icerok_server.__version__}")
 print("BAUDS: 12000000")
 

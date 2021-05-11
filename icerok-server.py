@@ -25,19 +25,20 @@ if __name__ == "__main__":
         print(msg)
         exit()
 
+    print("\nWaiting for the Data from the FPGA...")
+    count=0;
     while True:
-        print("Waiting for the Data from the FPGA...")
-
         try:
             data = serial_p.read(BYTES)
         except KeyboardInterrupt:
             print("\nABORT...")
             break
-        print("")
 
-        data_hex = [hex(d) for d in data]
-        print("Data received: ")
-        print(f'{data_hex}')
+        print(f'{hex(data[0])} ', end='', flush=True)
+        count = count + 1;
+
+        if (count % 16 == 0):
+          print("")
 
         # Write the data into the file
         # p = Path('.')

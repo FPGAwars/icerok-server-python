@@ -63,6 +63,10 @@ flit publish --repository pypitest
 flit publish
 ```
 
+## Credits
+
+* Thanks to [Anton Zhiyanov](https://github.com/nalgeon) for this wonderful article: [How to make an awesome Python package in 2021](https://antonz.org/python-packaging/) 
+
 <!-- Badges -->
 [pypi-image]: https://img.shields.io/pypi/v/icerok_server
 [pypi-url]: https://pypi.org/project/icerok_server/

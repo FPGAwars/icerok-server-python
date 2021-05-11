@@ -1,4 +1,4 @@
-"""Maasure you FPGA circuit!"""
+"""Measure you FPGA circuit!"""
 
 __version__ = "0.1.0"
 
@@ -13,6 +13,8 @@ TIMEOUT = 100
 FILENAME = "data.raw"
 BYTES = 1
 
+
+print("BAUDS: 12000000")
 
 # -- Open the serial port
 try:

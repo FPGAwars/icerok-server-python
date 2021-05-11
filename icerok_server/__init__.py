@@ -1,3 +1,4 @@
 """Measure you FPGA circuit!"""
 
-__version__ = "0.1.1"
+__package_name__ = "icerok-server"
+__version__ = "0.1.3"

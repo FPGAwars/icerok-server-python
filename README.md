@@ -1,6 +1,8 @@
 # icerok-server
 Receive data from the icerok circuits on the FPGA
 
+* Package in pypi: [icerok_server](https://pypi.org/project/icerok_server/)
+
 ## Installation
 
 TODO

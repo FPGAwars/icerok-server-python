@@ -3,17 +3,18 @@
 import time
 import sys
 from serial import Serial
+from serial.serialutil import SerialException
+import icerok_server
 
 # from pathlib import Path
 
-from serial.serialutil import SerialException
 
 SERIAL = "/dev/ttyUSB1"
 TIMEOUT = 100
 FILENAME = "data.raw"
 BYTES = 1
 
-
+print(f"{icerok_server.__package__}: Version {icerok_server.__version__}")
 print("BAUDS: 12000000")
 
 # -- Open the serial port
@@ -32,7 +33,7 @@ while True:
     try:
         data = serial_p.read(BYTES)
     except KeyboardInterrupt:
-        print("\nABORT...")
+        print("\nABORT...\n")
         serial_p.close()
         sys.exit()
 

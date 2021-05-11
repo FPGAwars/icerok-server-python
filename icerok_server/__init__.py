@@ -2,9 +2,12 @@
 
 __version__ = "0.1.1"
 
-from serial import Serial
+
 import time
-from pathlib import Path
+import sys
+from serial import Serial
+
+# from pathlib import Path
 
 from serial.serialutil import SerialException
 
@@ -20,14 +23,14 @@ print("BAUDS: 12000000")
 try:
     serial_p = Serial(SERIAL, 12000000)
     time.sleep(0.2)
-except SerialException as e:
+except SerialException as exc:
     print("Error al abrir puerto serie ")
-    code, msg = e.args
+    msg = exc.args[1]
     print(msg)
-    exit()
+    sys.exit()
 
 print("\nWaiting for the Data from the FPGA...")
-count=0;
+COUNT = 0
 while True:
     try:
         data = serial_p.read(BYTES)
@@ -35,10 +38,10 @@ while True:
         print("\nABORT...")
         break
 
-    print(f'{hex(data[0])} ', end='', flush=True)
-    count = count + 1;
+    print(f"{hex(data[0])} ", end="", flush=True)
+    COUNT = COUNT + 1
 
-    if (count % 16 == 0):
+    if COUNT % 16 == 0:
         print("")
 
     # Write the data into the file

@@ -28,6 +28,12 @@ sudo apt install python3-venv
 
 ```
 cd icerok-server-python
+python3 -m venv env
+```
+
+* Start the virtual environment
+```
+
 . env/bin/activate
 ```
 

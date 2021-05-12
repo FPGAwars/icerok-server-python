@@ -7,4 +7,5 @@ __version__ = "0.1.11"
 
 
 def start():
-    main.main()
+    """Entry point!"""
+    icerok_server.main.main()

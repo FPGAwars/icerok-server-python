@@ -19,7 +19,7 @@ def receive_data(ser):
             data = ser.read(BYTES)
         except KeyboardInterrupt:
             print("\nABORT...\n")
-            serial_p.close()
+            ser.close()
             sys.exit()
 
         print(f"{hex(data[0])} ", end="", flush=True)
@@ -29,11 +29,8 @@ def receive_data(ser):
             print("")
 
 
-# -----------------------
-# --    M A I N
-# -----------------------
-if __name__ == "__main__":
-
+def main():
+    """Main function: entry point"""
     print("\nRUNNING...")
 
     # -- Read the device from the arguments
@@ -75,3 +72,10 @@ if __name__ == "__main__":
 
     # -- Start the application
     receive_data(serial_p)
+
+
+# -----------------------
+# --    M A I N
+# -----------------------
+if __name__ == "__main__":
+    main()

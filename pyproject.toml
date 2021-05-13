@@ -15,7 +15,7 @@ requires = [
 ]
 
 [tool.flit.scripts]
-icerok-server = "icerok_server:start"
+icerok-server = "icerok_server.main:_main"
 
 
 

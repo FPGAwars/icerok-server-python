@@ -22,4 +22,4 @@ cenv:  ## Create the virtual-environment
 
 env:
 	@echo "For entering the virtual-environment just type:"
-	@echo ". /env/bin/activate"
+	@echo ". env/bin/activate"

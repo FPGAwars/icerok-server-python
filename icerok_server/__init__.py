@@ -1,11 +1,12 @@
 """Measure you FPGA circuit!"""
 
-import icerok_server.main
+from .version import VERSION
 
-__package_name__ = "icerok-server"
-__version__ = "0.1.11"
+__version__ = VERSION
+
+from .main import _main
 
 
 def start():
     """Entry point!"""
-    icerok_server.main.main()
+    _main()

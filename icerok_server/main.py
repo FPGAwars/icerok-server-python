@@ -5,6 +5,7 @@ import sys
 from serial import Serial
 from serial.serialutil import SerialException
 import serial.tools.list_ports
+from .version import VERSION
 
 BYTES = 1
 
@@ -29,9 +30,10 @@ def receive_data(ser):
             print("")
 
 
-def main():
+def _main():
     """Main function: entry point"""
     print("\nRUNNING...")
+    print(f"VERSION: {VERSION}")
 
     # -- Read the device from the arguments
     if len(sys.argv) >= 2:
@@ -78,4 +80,4 @@ def main():
 # --    M A I N
 # -----------------------
 if __name__ == "__main__":
-    main()
+    _main()

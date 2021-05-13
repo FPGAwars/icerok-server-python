@@ -1,4 +1,4 @@
-.PHONY: deps lint publish push tox
+.PHONY: deps lint publish push tox cenv env
 
 deps:  ## Install dependencies
 	python -m pip install --upgrade pip
@@ -16,3 +16,10 @@ push:  ## Push code with tags
 
 tox:   ## Run tox
 	python -m tox
+
+cenv:  ## Create the virtual-environment
+	python3 -m venv env
+
+env:
+	@echo "For entering the virtual-environment just type:"
+	@echo ". /env/bin/activate"

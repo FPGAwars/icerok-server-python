@@ -52,7 +52,7 @@ tox
 ### Execute `icerok-server`
 
 ```
-python3 icerok_server/main.py
+python3 app.py
 ```
 
 ### Publish in TestPyPi

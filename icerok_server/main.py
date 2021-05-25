@@ -2,12 +2,14 @@
 
 import time
 import sys
+from pathlib import Path
 from serial import Serial
 from serial.serialutil import SerialException
 import serial.tools.list_ports
 from .version import VERSION
 
-BYTES = 1
+BYTES = 8
+FILENAME = "data.raw"
 
 
 def receive_data(ser):
@@ -23,11 +25,17 @@ def receive_data(ser):
             ser.close()
             sys.exit()
 
-        print(f"{hex(data[0])} ", end="", flush=True)
-        count = count + 1
+        data_hex = [hex(d) for d in data]
+        print(f"Data received ({len(data_hex)} bytes): ")
+        print(f"{data_hex}")
 
-        if count % 16 == 0:
-            print("")
+        # Write the data to the file
+        p = Path('.')
+        f_data = p / FILENAME;
+        f_data.write_bytes(data)
+
+        print(f"FILE: {f_data.name}\n")
+
 
 
 def _main():

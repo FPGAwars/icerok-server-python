@@ -1,4 +1,4 @@
-.PHONY: deps lint publish push tox cenv env
+.PHONY: deps lint publish push tox cenv env install
 
 deps:  ## Install dependencies
 	python -m pip install --upgrade pip
@@ -23,3 +23,7 @@ cenv:  ## Create the virtual-environment
 env:
 	@echo "For entering the virtual-environment just type:"
 	@echo ". env/bin/activate"
+
+install:  ## Install the tool locally
+	flit build
+	flit install

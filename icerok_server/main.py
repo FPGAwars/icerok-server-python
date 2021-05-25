@@ -16,7 +16,6 @@ def receive_data(ser):
     """Receive the data from the FPGA"""
 
     print("\nWaiting for the Data from the FPGA...")
-    count = 0
     while True:
         try:
             data = ser.read(BYTES)
@@ -30,12 +29,11 @@ def receive_data(ser):
         print(f"{data_hex}")
 
         # Write the data to the file
-        p = Path('.')
-        f_data = p / FILENAME;
+        current_folder = Path(".")
+        f_data = current_folder / FILENAME
         f_data.write_bytes(data)
 
         print(f"FILE: {f_data.name}\n")
-
 
 
 def _main():
